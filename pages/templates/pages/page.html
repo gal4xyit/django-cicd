@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} | DevOps Demo</title>
+    <style>
+        body {
+            margin: 0;
+            background: #101827;
+            color: #e5e7eb;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+        header {
+            padding: 24px;
+            background: #1e293b;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            margin: 5px 16px;
+            color: #7dd3fc;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 760px;
+            margin: 70px auto;
+            padding: 32px;
+            background: #1e293b;
+            border-radius: 16px;
+        }
+        h1 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+        footer {
+            padding: 24px;
+            color: #94a3b8;
+            text-align: center;
+        }
+        @media (max-width: 850px) {
+            main { margin: 32px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Головна навігація">
+            <a href="{% url 'pages:home' %}">Головна</a>
+            <a href="{% url 'pages:about' %}">Про проєкт</a>
+            <a href="{% url 'pages:contacts' %}">Контакти</a>
+        </nav>
+    </header>
+    <main>
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+    </main>
+    <footer>Django · GitHub Actions · Docker</footer>
+</body>
+</html>
